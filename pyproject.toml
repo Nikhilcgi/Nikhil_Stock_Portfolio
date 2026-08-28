@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "indian-portfolio-tracker"
+version = "0.1.0"
+description = "Local, auditable multi-broker Indian equity portfolio tracker"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "duckdb",
+  "openpyxl",
+  "pandas",
+  "pdfplumber",
+  "plotly",
+  "streamlit",
+]
+
+[project.scripts]
+portfolio-tracker = "portfolio_tracker.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
