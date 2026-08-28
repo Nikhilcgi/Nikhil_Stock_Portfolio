@@ -20,11 +20,9 @@ dependencies = [
 [project.scripts]
 portfolio-tracker = "portfolio_tracker.cli:main"
 
+[tool.setuptools]
+package-dir = {"" = "src"}
+
 [tool.setuptools.packages.find]
 where = ["src"]
-
-
-[tool.poetry]
-packages = [
-  { include = "portfolio_tracker", from = "src" }
-]
+include = ["portfolio_tracker*"]
