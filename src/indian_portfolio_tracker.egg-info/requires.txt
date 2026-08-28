@@ -1,6 +1,0 @@
-duckdb
-openpyxl
-pandas
-pdfplumber
-plotly
-streamlit
